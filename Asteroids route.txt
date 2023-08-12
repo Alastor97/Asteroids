@@ -1,0 +1,45 @@
+- ship: 
+	- sprite *************************
+	- movement: *************************
+		- movimiento con teclas *************************
+		- frenado *************************
+		- reversa *************************
+	- collision *************************
+	- life *************************
+	- destruction animation 
+	- damage animation 
+	- weapon: *************************
+		- sprite *************************
+		- bullet spawner *************************
+		- bullet: *************************
+			- sprite *************************
+			- movement *************************
+			- collision *************************
+- asteroids:
+	- sprite *************************
+	- movement *************************
+	- collision *************************
+	- asteroides con diferentes velocidades:
+		- quietos
+		- baja
+		- media
+		- alta
+		- super alta
+		- cometas
+	- move animation:
+		- rotation (torque)
+	- destruction animation 
+- background:
+	- stars animation *************************
+	- sprites *************************
+	- sprite spawner *************************
+	- movement *************************
+	- parallax.
+- ui:
+	- Vida 
+	- Puntos ******************
+	- energia del propulsor 
+- recompensas:
+	- 
+
+
