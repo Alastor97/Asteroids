@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class BackgroundScript : MonoBehaviour
 {
     public GameObject star;
+    public GameObject asteroid;
     public int xLimit;
     public int yLimit;
     void Awake()
@@ -13,8 +15,18 @@ public class BackgroundScript : MonoBehaviour
         {
             Vector3 pos = new Vector3(Random.Range(-xLimit, xLimit), Random.Range(-yLimit, yLimit), 3);
             var newStar = Instantiate(star, pos, Quaternion.identity, GameObject.Find("Background").transform);
+            
 
             var anim = newStar.GetComponent<Animator>();
+            anim.speed = Random.Range(0.5f, 1.5f);
+        }
+        
+        for(int i = 0; i < 50; i++)
+        {
+            Vector3 pos = new Vector3(Random.Range(-xLimit, xLimit), Random.Range(-yLimit, yLimit), 3);
+            var newAsteroid = Instantiate(star, pos, Quaternion.identity, GameObject.Find("Background").transform);
+
+            var anim = newAsteroid.GetComponent<Animator>();
             anim.speed = Random.Range(0.5f, 1.5f);
         }
     }

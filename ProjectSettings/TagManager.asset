@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ship
   - Bullet Target
+  - Logic
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Asteroid
   - Water
   - UI
   - 
