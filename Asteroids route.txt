@@ -20,14 +20,20 @@
 	- movement *************************
 	- collision *************************
 	- asteroides con diferentes velocidades:
-		- quietos
+		- quietos *************************
 		- baja
 		- media
 		- alta
 		- super alta
 		- cometas
-	- move animation:
-		- rotation (torque)
+	- asteroides con diferentes tamaños:
+		- diminutos
+		- pequeños
+		- medianos
+		- grandes
+	- Instantiate asteroid random. *************************
+	- move animation:*************************
+		- rotation (torque) *************************
 	- destruction animation 
 - background:
 	- stars animation *************************
