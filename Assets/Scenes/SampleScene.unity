@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 945884712}
   m_Layer: 0
   m_Name: Asteroid Spawners
-  m_TagString: Untagged
+  m_TagString: Asteroid Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123758c6aec63b3408d82226824e0eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: 7041029490144067106, guid: 7f1d57dcc84911146bf84c409e54bab5, type: 3}
 --- !u!1 &1040894836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   star: {fileID: 1034353659461354216, guid: 597c831645d1f5b4d839c2423f98e87c, type: 3}
   asteroid: {fileID: 7041029490144067106, guid: 7f1d57dcc84911146bf84c409e54bab5, type: 3}
+  asteroidSpawner: {fileID: 0}
   xLimit: 10
   yLimit: 10
 --- !u!1660057539 &9223372036854775807

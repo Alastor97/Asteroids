@@ -19,36 +19,42 @@ public class AsteroidSpawnerScript : MonoBehaviour
     private float[] size = {0.75f, 0.5f, 0.25f, 1f};    
     void Start()
     {
-        shipPosition = GameObject.FindGameObjectWithTag("Ship").GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(timer < spawnRate)
+        if (timer < spawnRate)
         {
             timer += Time.deltaTime;
 
         }
         else
         {
-            spawnAsteroid();
+            spawnAsteroidMoving();
             spawnRate = Random.Range(spawnRateMin, spawnRateMax);
             timer = 0;
 
         }
     }
 
-    void spawnAsteroid()
+    void spawnAsteroidMoving()
     {
+        shipPosition = GameObject.FindGameObjectWithTag("Ship").GetComponent<Transform>();
+        
+        GameObject asteroid = Instantiate(asteroidPrefab, new Vector3(transform.position.x, transform.position.y + Random.Range(bottomPosition, topPosition), 2.0f), transform.rotation);
+
         var sizeMultipler = Random.Range(0, 3);
-        GameObject asteroid = Instantiate(asteroidPrefab, new Vector3(transform.position.x, Random.Range(bottomPosition, topPosition), 2.0f), transform.rotation);
         asteroid.transform.localScale = new Vector3(asteroid.transform.localScale.x * size[sizeMultipler], asteroid.transform.localScale.y * size[sizeMultipler], 1);
+
         Rigidbody2D myRigibody = asteroid.GetComponent<Rigidbody2D>();
         Vector3 dir = (shipPosition.position - myRigibody.transform.position).normalized;
         myRigibody.AddForce(dir * Random.Range(moveSpeedMin, moveSpeedMax), ForceMode2D.Impulse);
 
     }
+
+    
 
 }

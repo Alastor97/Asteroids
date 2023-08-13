@@ -21,6 +21,7 @@ public class ShipScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Debug.Log(rb.velocity.magnitude);
         if(rb.velocity.magnitude > maxSpeed)
         {
@@ -45,6 +46,10 @@ public class ShipScript : MonoBehaviour
             else if (Input.GetKey(KeyCode.Space))
             {
                 rb.velocity = rb.velocity * brakeSpeed;
+                if(rb.velocity.magnitude < 0.0005f)
+                {
+                    rb.velocity = rb.velocity * 0;
+                }
             }
         }
         

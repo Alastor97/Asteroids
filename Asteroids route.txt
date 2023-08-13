@@ -21,16 +21,17 @@
 	- collision *************************
 	- asteroides con diferentes velocidades:
 		- quietos *************************
-		- baja
-		- media
-		- alta
-		- super alta
+		- baja *************************
+		- media *************************
+		- alta *************************
+		- super alta *************************
 		- cometas
 	- asteroides con diferentes tamaños:
-		- diminutos
-		- pequeños
-		- medianos
-		- grandes
+		- piedritas muy pequeñas y rapidas
+		- diminutos *************************
+		- pequeños *************************
+		- medianos *************************
+		- grandes 
 	- Instantiate asteroid random. *************************
 	- move animation:*************************
 		- rotation (torque) *************************
