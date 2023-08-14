@@ -43,7 +43,7 @@
 	- movement *************************
 	- parallax.
 - ui:
-	- Vida 
+	- Vida ******************
 	- Puntos ******************
 	- energia del propulsor 
 - recompensas:
