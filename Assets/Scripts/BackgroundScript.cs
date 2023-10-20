@@ -13,6 +13,11 @@ public class BackgroundScript : MonoBehaviour
 
     private void Start()
     {
+        spawnAsteroid();
+    }
+
+    private void spawnAsteroid()
+    {
         asteroidSpawner = GameObject.FindGameObjectWithTag("Asteroid Spawner").GetComponent<AsteroidSpawnsScript>();
         asteroidSpawner.spawnAsteroids(xLimit, yLimit);
         for (int i = 0; i < 100; i++)
