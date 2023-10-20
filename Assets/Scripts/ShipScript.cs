@@ -28,10 +28,10 @@ public class ShipScript : MonoBehaviour
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
 
-        if (shipDestroyed)
+        if (logic.healthAmount <= 0f)
         {
             logic.gameOver();
-        } 
+        }
         else
         {
             rotateShipWithMouse();
@@ -64,13 +64,6 @@ public class ShipScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (life == 0)
-        {
-            shipDestroyed = true;
-        }
-        else
-        {
-            life -= 1;
-        }
+        logic.takeDamage(20f);
     }
 }

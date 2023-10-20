@@ -21,7 +21,7 @@ public class AsteroidScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (life == 0)
+        if (life <= 0)
         {
             logic.addMoney(10);
             Destroy(gameObject);
